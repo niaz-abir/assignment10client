@@ -108,7 +108,10 @@ const Register = () => {
                 </button>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handlegithub} className="btn btn-outline">
+                <button
+                  onClick={handlegithub}
+                  className="btn  bg-cyan-600 hover:bg-rose-400"
+                >
                   SignWithGithub
                 </button>
               </div>

@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../Context/Authprovider";
+import "./Header.css";
+import ReactTooltip from "react-tooltip";
 
 const Header = () => {
   const { user, logout } = useContext(Authcontext);
@@ -75,12 +77,14 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
-          {
-            <img
-              className="rounded w-8 lg:w-14 mr-2"
-              src={user?.photoURL}
-            ></img>
-          }
+          <div>
+            {
+              <img
+                className="rounded w-8 lg:w-14 mr-2 tooltip"
+                src={user?.photoURL}
+              ></img>
+            }
+          </div>
           <p>{user?.email}</p>
         </div>
       </div>

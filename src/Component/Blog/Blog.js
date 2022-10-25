@@ -2,11 +2,11 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
-      <h1>Our Blog Question</h1>
+    <div className="ml-20 lg:ml-14 mt-14 mb-14">
+      <h1 className="text-4xl font-bold text-blue-400 ">OUR BLOG QUESTION</h1>
 
-      <div>
-        <h2>Q1:What is Cors? </h2>
+      <div className="mt-14 w-4/5 lg:w-2/3 border-2 p-4  border-blue-300 shadow-lg shadow-blue-300">
+        <h2 className="text-2xl font-bold mb-2">Q1:What is Cors? </h2>
         <p>
           Ans: CORS stands for Cross-Origin Resource Sharing. It allows us to
           relax the security applied to an API. This is done by bypassing the
@@ -21,8 +21,8 @@ const Blog = () => {
           the same server handles the request.
         </p>
       </div>
-      <div>
-        <h2>
+      <div className="mt-14 w-4/5 lg:w-2/3 border-2 p-4  border-blue-300 shadow-lg shadow-blue-300">
+        <h2 className="text-2xl font-bold mb-2">
           Q2:Why are using firebase? What Other option do you have implement
           authentication ?
         </h2>
@@ -42,8 +42,10 @@ const Blog = () => {
           scans, voice recognition, and fingerprints{" "}
         </p>
       </div>
-      <div>
-        <h2>How does private router work?</h2>
+      <div className="mt-14 w-4/5 lg:w-2/3 border-2 p-4  border-blue-300 shadow-lg shadow-blue-300">
+        <h2 className="text-2xl font-bold mb-2">
+          Q3 -How does private router work?
+        </h2>
         <p>
           Ans: PrivateRoute component is the blueprint for all private routes in
           the application. If the user is logged in, go on and display the
@@ -58,8 +60,10 @@ const Blog = () => {
           private routes using react-router for your react apps. Let's start
         </p>
       </div>
-      <div>
-        <h2>What is Node ? How does it work?</h2>
+      <div className="mt-14 w-4/5 lg:w-2/3 border-2 p-4  border-blue-300 shadow-lg shadow-blue-300">
+        <h2 className="text-2xl font-bold mb-2">
+          Q4: What is Node ? How does it work?
+        </h2>
         <p>
           Ans: Javascript has existed since 1995 and has since taken over as the
           dominant language for web development. For much of its life,
