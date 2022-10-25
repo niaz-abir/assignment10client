@@ -53,7 +53,6 @@ const Header = () => {
               <Link to="/home">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link to="/home">Home</Link>
               <Link to="/course">Course</Link>
               <Link to="/blog">Blog</Link>
               <Link to="/faq"> Faq</Link>
@@ -69,7 +68,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <p>{user.name}</p>
+          <p>{user?.email}</p>
         </div>
       </div>
     </div>

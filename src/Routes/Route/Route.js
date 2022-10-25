@@ -6,6 +6,8 @@ import Course from "../../Component/Course/Course";
 import Faq from "../../Component/Faq/Faq";
 import Login from "../../Component/Login/Login";
 import Register from "../../Component/Register/Register";
+import Navload from "../../Component/Navload/Navload";
+import Navcomponent from "../../Component/Navcomponent/Navcomponent";
 
 export const routes = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ export const routes = createBrowserRouter([
       { path: "/blog", element: <Blog></Blog> },
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
+      {
+        path: "/navload",
+        element: <Navload></Navload>,
+      },
+      {
+        path: "/course/navcom/:id",
+        element: <Navcomponent></Navcomponent>,
+      },
     ],
   },
 ]);

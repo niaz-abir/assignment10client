@@ -1,6 +1,13 @@
-import React from "react";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import React, { useContext } from "react";
+import { Authcontext } from "../../Context/Authprovider";
 
 const Register = () => {
+  const { loginwithemailpass, googlesignin, githubsignin } =
+    useContext(Authcontext);
+  const googleprovider = new GoogleAuthProvider();
+  const githubprovider = new GithubAuthProvider();
+
   const handleregister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -8,9 +15,31 @@ const Register = () => {
     const photourl = form.photourl.value;
     const email = form.email.value;
     const password = form.password.value;
-
-    console.log(name, photourl, password, email);
+    loginwithemailpass(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
   };
+
+  const handlewithgoogle = () => {
+    googlesignin(googleprovider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+  const handlegithub = () => {
+    githubsignin(githubprovider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -73,10 +102,14 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">SignWithGoogle</button>
+                <button onClick={handlewithgoogle} className="btn btn-primary">
+                  SignWithGoogle
+                </button>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">SignWithGithub</button>
+                <button onClick={handlegithub} className="btn btn-primary">
+                  SignWithGithub
+                </button>
               </div>
             </form>
           </div>
