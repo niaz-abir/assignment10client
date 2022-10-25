@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Coursenav = ({ loads }) => {
   //   console.log(loads);
   return (
-    <div>
-      <h2 className="border-2 w-2/4 text-center mb-6 px-2 py-4 ml-8 lg:ml-0 rounded-lg text-2xl font-semibold border-blue-500">
+    <div className="mb-8 ">
+      <Link to={`/detail/${loads.id}`} className=" text-purple-800 text-2xl  ">
         {loads.name}
-      </h2>
+        <hr className="w-1/2 mt-4 flex ml-28"></hr>
+      </Link>
     </div>
   );
 };

@@ -8,6 +8,8 @@ import Login from "../../Component/Login/Login";
 import Register from "../../Component/Register/Register";
 import Navload from "../../Component/Navload/Navload";
 import Navcomponent from "../../Component/Navcomponent/Navcomponent";
+import Coursedetails from "../../Component/Coursedetails/Coursedetails";
+import Coursedetailsdiv from "../../Component/Coursedetalisdiv/Coursedetailsdiv";
 
 export const routes = createBrowserRouter([
   {
@@ -25,8 +27,20 @@ export const routes = createBrowserRouter([
         element: <Navload></Navload>,
       },
       {
-        path: "/course/navcom/:id",
+        path: "/navcom",
         element: <Navcomponent></Navcomponent>,
+      },
+      {
+        path: "/detail/:id",
+        element: <Coursedetails></Coursedetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/courseinfo/${params.id}`),
+      },
+      {
+        path: "/detail/:id",
+        element: <Coursedetails></Coursedetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/courseinfo/${params.id}`),
       },
     ],
   },

@@ -12,7 +12,7 @@ const Navload = () => {
   }, []);
   return (
     <div>
-      <div className="ml-24">
+      <div className="mt-24 ">
         {load.map((loads) => (
           <Coursenav loads={loads} key={loads.id}></Coursenav>
         ))}
