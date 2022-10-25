@@ -58,6 +58,9 @@ const Blog = () => {
           private routes using react-router for your react apps. Let's start
         </p>
       </div>
+      <div>
+        <h2>What is Node ? How does it work?</h2>
+      </div>
     </div>
   );
 };
