@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import { Authcontext } from "../../Context/Authprovider";
 
 const Header = () => {
-  const { user } = useContext(Authcontext);
+  const { user, logout } = useContext(Authcontext);
+
+  const handlelogout = () => {
+    logout()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -63,11 +69,18 @@ const Header = () => {
             <li>
               <Link to="/login"> Login</Link>
               <Link to="/register">Register</Link>
-              <Link to="/faq"> Faq</Link>
             </li>
           </ul>
+          <button onClick={handlelogout}>Logout</button>
         </div>
+
         <div className="navbar-end">
+          {
+            <img
+              className="rounded w-8 lg:w-14 mr-2"
+              src={user?.photoURL}
+            ></img>
+          }
           <p>{user?.email}</p>
         </div>
       </div>

@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.confiq";
 
@@ -26,6 +27,9 @@ const Authprovider = ({ children }) => {
   const googlesignin = (provider) => {
     return signInWithPopup(auth, provider);
   };
+  const logout = () => {
+    return signOut(auth);
+  };
   const githubsignin = (provider) => {
     return signInWithPopup(auth, provider);
   };
@@ -46,6 +50,7 @@ const Authprovider = ({ children }) => {
     createlogin,
     googlesignin,
     githubsignin,
+    logout,
   };
   return (
     <Authcontext.Provider value={authinfo}>{children}</Authcontext.Provider>

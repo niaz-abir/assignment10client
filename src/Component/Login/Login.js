@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { Authcontext } from "../../Context/Authprovider";
 
 const Login = () => {
   const { createlogin } = useContext(Authcontext);
+  const [error, seterror] = useState("");
 
   const handlelogin = (event) => {
     event.preventDefault();
@@ -13,8 +15,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        form.reset();
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        seterror(" Your passord is not correct!");
+      });
   };
   return (
     <div>
@@ -23,6 +29,7 @@ const Login = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold mb-2">Login now!</h1>
           </div>
+          <h2 className="text-2xl text-black">{error}</h2>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handlelogin} className="card-body">
               <div className="form-control">
@@ -48,9 +55,12 @@ const Login = () => {
                   className="input input-bordered"
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <Link
+                    to="/register"
+                    className="label-text-alt link link-hover"
+                  >
                     Forgot password?
-                  </a>
+                  </Link>
                 </label>
               </div>
               <div className="form-control mt-6">

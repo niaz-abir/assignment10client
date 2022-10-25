@@ -19,6 +19,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        form.reset();
       })
       .catch((error) => console.error(error));
   };
@@ -42,7 +43,7 @@ const Register = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold mb-2">Register now!</h1>
@@ -99,15 +100,15 @@ const Register = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Register</button>
+                <button className="btn btn-outline">Register</button>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handlewithgoogle} className="btn btn-primary">
+                <button onClick={handlewithgoogle} className="btn btn-outline">
                   SignWithGoogle
                 </button>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handlegithub} className="btn btn-primary">
+                <button onClick={handlegithub} className="btn btn-outline">
                   SignWithGithub
                 </button>
               </div>
