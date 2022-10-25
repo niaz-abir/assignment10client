@@ -60,6 +60,21 @@ const Blog = () => {
       </div>
       <div>
         <h2>What is Node ? How does it work?</h2>
+        <p>
+          Ans: Javascript has existed since 1995 and has since taken over as the
+          dominant language for web development. For much of its life,
+          JavaScript was used mainly for client-side scripting inside tags
+          executing in web browsers. This limitation meant that developers were
+          often working in many different languages and frameworks between the
+          front-end (client-side) and backend (server-side) aspects of a web
+          application .Node.js basically works on two concept Asynchronous
+          Non-blocking I/O Non-blocking I/o: Non-blocking i/o means working with
+          multiple requests without blocking the thread for a single request.
+          I/O basically interacts with external systems such as files,
+          databases. Node.js is not used for CPU-intensive work means for
+          calculations, video processing because a single thread cannot handle
+          the CPU works.{" "}
+        </p>
       </div>
     </div>
   );
