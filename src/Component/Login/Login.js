@@ -30,7 +30,7 @@ const Login = () => {
             <h1 className="text-4xl font-bold mb-2">Login now!</h1>
           </div>
           <h2 className="text-2xl text-black">{error}</h2>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-lg shadow-blue-500 ">
             <form onSubmit={handlelogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -64,7 +64,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-white text-black  hover:bg-pink-700  ">
+                <button className="btn bg-cyan-600 hover:bg-rose-500 ">
                   Login
                 </button>
               </div>

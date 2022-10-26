@@ -43,12 +43,12 @@ const Register = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen  ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold mb-2">Register now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-lg shadow-blue-500 ">
             <form onSubmit={handleregister} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -100,17 +100,22 @@ const Register = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-outline">Register</button>
+                <button className="btn bg-cyan-600 hover:bg-rose-500">
+                  Register
+                </button>
               </div>
               <div className="form-control mt-6">
-                <button onClick={handlewithgoogle} className="btn btn-outline">
+                <button
+                  onClick={handlewithgoogle}
+                  className="btn bg-cyan-600 hover:bg-rose-500"
+                >
                   SignWithGoogle
                 </button>
               </div>
               <div className="form-control mt-6">
                 <button
                   onClick={handlegithub}
-                  className="btn  bg-cyan-600 hover:bg-rose-400"
+                  className="btn  bg-cyan-600 hover:bg-rose-500"
                 >
                   SignWithGithub
                 </button>
