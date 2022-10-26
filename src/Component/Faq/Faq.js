@@ -2,14 +2,14 @@ import React from "react";
 
 const Faq = () => {
   return (
-    <div className="">
+    <div className="mt-24">
       {/* swap */}
-      <div>
-        <label className="btn btn-circle swap swap-rotate ">
+      <div className=" ml-48 lg:ml-60">
+        <label className="btn btn-circle swap swap-rotate bg-blue-400 ">
           <input type="checkbox" />
 
           <svg
-            className="swap-off fill-current"
+            className="swap-off fill-current "
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -31,11 +31,11 @@ const Faq = () => {
       </div>
 
       {/* option */}
-      <div>
+      <div className=" ml-40 lg:ml-48 mb-8">
         <div className="grid grid-cols-1 mt-4">
-          <select className="select select-ghost text-1xl w-2/3 max-w-xs">
+          <select className="select select-ghost text-2xl text-blue-500 w-2/3 max-w-xs">
             <option className="grid grid-cols-1" disabled selected>
-              Pick the best JS Course
+              Pick the Course
             </option>
             <option>Sass</option>
             <option>Bootstrap</option>
@@ -47,8 +47,9 @@ const Faq = () => {
         </div>
       </div>
       {/* progress bar */}
-      <div>
-        <div className="grid grid-cols-1 mt-14">
+      <div className="ml-40 lg:ml-48">
+        <h2 className="text-2xl">Uses of course progress</h2>
+        <div className="grid grid-cols-1 mt-4">
           <progress
             className="progress progress-info w-56 mb-4"
             value="10"
@@ -90,6 +91,16 @@ const Faq = () => {
             value="100"
             max="100"
           ></progress>
+        </div>
+      </div>
+      <div className=" ml-24">
+        <div className="stack ">
+          <div className="card shadow-md bg-blue-400 text-primary-content">
+            <div className="card-body">
+              <h2 className="card-title">Discount</h2>
+              <p>If you take two course you get25% discount</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
