@@ -192,7 +192,7 @@ const Header = () => {
               ></img>
             }
           </div>
-          <p className="text-pink-900 ">{user?.email}</p>
+          {/* <p className="text-pink-900 ">{user?.email}</p> */}
         </div>
       </div>
     </div>

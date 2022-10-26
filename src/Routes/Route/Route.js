@@ -10,6 +10,8 @@ import Navload from "../../Component/Navload/Navload";
 import Navcomponent from "../../Component/Navcomponent/Navcomponent";
 import Coursedetails from "../../Component/Coursedetails/Coursedetails";
 import Coursedetailsdiv from "../../Component/Coursedetalisdiv/Coursedetailsdiv";
+import Reactpackeg from "../../Component/Reactpackeg/Reactpackeg";
+import Privateroute from "../../Component/Privateroute/Privateroute";
 
 export const routes = createBrowserRouter([
   {
@@ -39,6 +41,17 @@ export const routes = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <Coursedetails></Coursedetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/courseinfo/${params.id}`),
+      },
+
+      {
+        path: "/packeg/:id",
+        element: (
+          <Privateroute>
+            <Reactpackeg></Reactpackeg>
+          </Privateroute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/courseinfo/${params.id}`),
       },

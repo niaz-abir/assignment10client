@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Coursedetails = () => {
   const Coursedetails = useLoaderData();
@@ -27,7 +27,11 @@ const Coursedetails = () => {
             <span className="font-bold text-pink-900 ">Details</span> :
             {Coursedetails.details}
           </p>
-          <button className="btn btn-outline text-pink-900 ">Thank you</button>
+          <Link to={`/packeg/${Coursedetails.id}`}>
+            <button className="btn btn-outline text-pink-900 ">
+              React packeg
+            </button>
+          </Link>
         </div>
       </div>
     </div>
