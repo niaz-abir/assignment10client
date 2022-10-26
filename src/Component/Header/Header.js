@@ -77,7 +77,11 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
-          <div>
+          {/* <div className="tooltip" data-tip="hello">
+            <button className="btn">Hover me</button>
+          </div> */}
+
+          <div className="tooltip tooltip-left" data-tip={user?.displayName}>
             {
               <img
                 className="rounded w-8 lg:w-14 mr-2 tooltip"
