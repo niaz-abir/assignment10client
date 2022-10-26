@@ -164,7 +164,9 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <button onClick={handlelogout}>Logout</button>
+          <button onClick={handlelogout} className="text-pink-900">
+            Logout
+          </button>
         </div>
 
         <div className="navbar-end">

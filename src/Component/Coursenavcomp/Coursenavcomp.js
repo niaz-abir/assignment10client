@@ -12,10 +12,12 @@ const Coursenavcomp = ({ comp }) => {
             <img className=" w-24" src={comp.img} />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title">{comp.name}</h2>
-            <p>Instructor:{comp.Instructor}</p>
+            <h2 className="card-title text-pink-900 ">{comp.name}</h2>
+            <p className="text-pink-900 ">Instructor:{comp.Instructor}</p>
             <div className="card-actions">
-              <button className="btn btn-primary">Details</button>
+              <button className="btn btn-primary text-pink-900 ">
+                Details
+              </button>
             </div>
           </div>
         </div>
