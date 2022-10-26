@@ -15,6 +15,7 @@ const Header = () => {
   const handlemood = () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
+    console.log("abir");
   };
   return (
     <div>
@@ -69,7 +70,10 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <button className="hover:bg-blue-400 text-pink-900  text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600">
+                <button
+                  onClick={handlemood}
+                  className="hover:bg-blue-400 text-pink-900  text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
+                >
                   Toggle
                 </button>
               </li>
@@ -164,7 +168,10 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <button onClick={handlelogout} className="text-pink-900">
+          <button
+            onClick={handlelogout}
+            className="text-pink-900 display:none;"
+          >
             Logout
           </button>
         </div>
