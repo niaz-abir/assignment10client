@@ -15,7 +15,7 @@ const Coursenavcomp = ({ comp }) => {
             <h2 className="card-title text-pink-900 ">{comp.name}</h2>
             <p className="text-pink-900 ">Instructor:{comp.Instructor}</p>
             <div className="card-actions">
-              <button className="btn btn-primary text-pink-900 ">
+              <button className="btn bg-cyan-600 hover:bg-rose-500 text-pink-900 ">
                 Details
               </button>
             </div>
