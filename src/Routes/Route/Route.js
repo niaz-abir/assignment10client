@@ -12,6 +12,7 @@ import Coursedetails from "../../Component/Coursedetails/Coursedetails";
 import Coursedetailsdiv from "../../Component/Coursedetalisdiv/Coursedetailsdiv";
 import Reactpackeg from "../../Component/Reactpackeg/Reactpackeg";
 import Privateroute from "../../Component/Privateroute/Privateroute";
+import Pdf from "../../Component/Pdf/Pdf";
 
 export const routes = createBrowserRouter([
   {
@@ -54,6 +55,12 @@ export const routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/courseinfo/${params.id}`),
+      },
+      {
+        path: "/pdf",
+        element: <Pdf></Pdf>,
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/courseinfo/${params.id}`),
       },
     ],
   },

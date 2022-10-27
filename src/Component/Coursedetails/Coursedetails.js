@@ -6,9 +6,12 @@ const Coursedetails = () => {
   console.log(Coursedetails);
   return (
     <div>
-      <div className="flex justify-end">
-        <button className="btn btn-primary">PDF</button>
-      </div>
+      <Link to="/pdf">
+        <div className="flex justify-end">
+          <button className="btn btn-primary">PDF</button>
+        </div>
+      </Link>
+
       <div className="flex justify-center items-center mt-16">
         <div className="card  w-96 bg-base-100 shadow-xl">
           <figure>
