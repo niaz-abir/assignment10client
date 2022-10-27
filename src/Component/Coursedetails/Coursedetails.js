@@ -8,7 +8,9 @@ const Coursedetails = () => {
     <div>
       <Link to="/pdf">
         <div className="flex justify-end">
-          <button className="btn btn-primary">PDF</button>
+          <button className="btn px-8 text-black   font-bold border-0 bg-slate-400 hover:bg-blue-400">
+            PDF
+          </button>
         </div>
       </Link>
 
@@ -35,8 +37,8 @@ const Coursedetails = () => {
               {Coursedetails.details}
             </p>
             <Link to={`/packeg/${Coursedetails.id}`}>
-              <button className="btn btn-outline text-pink-900 ">
-                React packeg
+              <button className="btn bg-cyan-600 hover:bg-rose-500 text-white ">
+                Get Premium Acess
               </button>
             </Link>
           </div>
