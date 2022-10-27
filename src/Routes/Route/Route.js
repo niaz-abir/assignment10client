@@ -19,6 +19,7 @@ export const routes = createBrowserRouter([
     path: "/",
     element: <Main></Main>,
     children: [
+      { path: "/", element: <Home></Home> },
       { path: "/home", element: <Home></Home> },
       { path: "/course", element: <Course></Course> },
       { path: "/faq", element: <Faq></Faq> },
@@ -61,6 +62,10 @@ export const routes = createBrowserRouter([
         element: <Pdf></Pdf>,
         // loader: ({ params }) =>
         //   fetch(`http://localhost:5000/courseinfo/${params.id}`),
+      },
+      {
+        path: "/*",
+        element: <div>This is error</div>,
       },
     ],
   },

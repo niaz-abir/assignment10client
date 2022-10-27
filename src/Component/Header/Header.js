@@ -152,28 +152,32 @@ const Header = () => {
                 Toggle
               </button>
             </li>
-            <li>
-              <Link
-                to="/login"
-                className="hover:bg-blue-400 text-pink-900   text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
+
+            {user ? (
+              <button
+                onClick={handlelogout}
+                className="text-pink-900 rounded-lg p-4 hover:bg-blue-400 text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
               >
-                {" "}
-                Login
-              </Link>
-              <Link
-                to="/register"
-                className="hover:bg-blue-400 text-pink-900   text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
-              >
-                Register
-              </Link>
-            </li>
+                Logout
+              </button>
+            ) : (
+              <li>
+                <Link
+                  to="/login"
+                  className="hover:bg-blue-400 text-pink-900   text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
+                >
+                  {" "}
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="hover:bg-blue-400 text-pink-900   text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
+                >
+                  Register
+                </Link>
+              </li>
+            )}
           </ul>
-          <button
-            onClick={handlelogout}
-            className="text-pink-900 rounded-lg p-4 hover:bg-blue-400 text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
-          >
-            Logout
-          </button>
         </div>
 
         <div className="navbar-end">
