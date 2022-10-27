@@ -170,7 +170,7 @@ const Header = () => {
           </ul>
           <button
             onClick={handlelogout}
-            className="text-pink-900 display:none;"
+            className="text-pink-900 rounded-lg p-4 hover:bg-blue-400 text-1xl f font-semibold hover:shadow-lg hover:shadow-purple-600"
           >
             Logout
           </button>
