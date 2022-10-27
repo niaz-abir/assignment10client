@@ -6,7 +6,7 @@ const Navload = () => {
   const [load, setload] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/course")
+    fetch("https://assignment9-server.vercel.app/course")
       .then((res) => res.json())
       .then((data) => setload(data));
   }, []);

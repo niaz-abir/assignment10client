@@ -1,5 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Authcontext } from "../../Context/Authprovider";
 
 const Register = () => {
@@ -8,6 +9,7 @@ const Register = () => {
   const googleprovider = new GoogleAuthProvider();
   const githubprovider = new GithubAuthProvider();
   const [passerror, sepasserror] = useState("");
+  const navigate = useNavigate();
 
   const handleregister = (event) => {
     event.preventDefault();
@@ -24,6 +26,7 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         form.reset();
+        navigate("/");
       })
       .catch((error) => console.error(error));
   };

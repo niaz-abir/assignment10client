@@ -38,13 +38,17 @@ export const routes = createBrowserRouter([
         path: "/detail/:id",
         element: <Coursedetails></Coursedetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courseinfo/${params.id}`),
+          fetch(
+            `https://assignment9-server.vercel.app/courseinfo/${params.id}`
+          ),
       },
       {
         path: "/detail/:id",
         element: <Coursedetails></Coursedetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courseinfo/${params.id}`),
+          fetch(
+            `https://assignment9-server.vercel.app/courseinfo/${params.id}`
+          ),
       },
 
       {
@@ -55,17 +59,21 @@ export const routes = createBrowserRouter([
           </Privateroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courseinfo/${params.id}`),
+          fetch(
+            `https://assignment9-server.vercel.app/courseinfo/${params.id}`
+          ),
       },
       {
         path: "/pdf",
         element: <Pdf></Pdf>,
         // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/courseinfo/${params.id}`),
+        //   fetch(`https://assignment9-server.vercel.app/courseinfo/${params.id}`),
       },
       {
         path: "/*",
-        element: <div>This is error</div>,
+        element: (
+          <div className="text-5xl flex justify-center">404!This is error</div>
+        ),
       },
     ],
   },

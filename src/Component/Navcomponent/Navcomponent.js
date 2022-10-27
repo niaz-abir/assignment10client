@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navcomponent = () => {
   const [comps, setcoms] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/course")
+    fetch("https://assignment9-server.vercel.app/course")
       .then((res) => res.json())
       .then((data) => setcoms(data));
   }, []);
